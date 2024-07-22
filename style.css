@@ -1,0 +1,156 @@
+body {
+    /* background: hsl(240, 2%, 81%); */
+    /* background: linear-gradient(to right, gainsboro, orange, paleturquoise); */
+    /* background: repeating-linear-gradient(to bottom, #f00 0%, #00f 100%); */
+    height: 100vh;
+    display: flex;
+    flex-direction: column!important;
+    /* radial-gradient */
+    /* conic-gradient */
+    /* background: repeating-linear-gradient(angle | to side-or-corner, color-stop1, color-stop2, ...); */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    right: 30px;
+    top: 13px;
+    color: blueviolet;
+    display: none;
+}
+
+.navbar a {
+    position: relative;
+    color: black;
+    font-weight: bold;
+    font-family: 'arial', sans-serif;
+    z-index: 1;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    background: blueviolet;
+    top: 23px;
+    left: 0;
+    width: 0;
+    height: 7%;
+    z-index: -1;
+    transition: .5s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.active {
+    margin-left: 0!important;
+}
+
+.action {
+    width: 50px;
+    height: 50px;
+    color: white;
+    z-index: 7;
+}
+
+
+/* img */
+
+.milieu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center!important;
+    gap: 3rem;
+    margin-top: 10rem;
+}
+
+.img-contain {
+    width: 200px;
+    height: 200px;
+}
+
+.img-contain img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    object-fit: cover;
+}
+
+.img-contain img:hover {
+    scale: 0.95;
+}
+
+.contient1 {
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    gap: 0.5rem;
+}
+
+.contient1 p {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.text {
+    color: black;
+    font-family: "Oswald", sans-serif;
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        position: relative;
+    }
+    .icon {
+        display: block;
+        color: black;
+        z-index: 5;
+    }
+    .navbar a::before {
+        background: white;
+    }
+    .action {
+        position: absolute;
+        font-size: 20px;
+        right: 0px;
+        top: 13px;
+        color: white;
+        z-index: 7;
+    }
+    .navbar.active {
+        margin-left: 0!important;
+    }
+    .navbar {
+        position: absolute;
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        background-color: #7FB3D5 !important;
+        backdrop-filter: blur(5px);
+        padding: 3rem;
+        margin-left: 470px;
+        height: 1150px;
+        width: 100%;
+        transition: all 0.5s ease;
+        z-index: 3;
+    }
+    .navbar a {
+        color: white;
+    }
+}

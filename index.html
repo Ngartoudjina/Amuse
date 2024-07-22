@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist\bootstrap-5.3.2-dist\css\bootstrap.min.css">
+    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>Folio</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar d-flex justify-content-around gap-2">
+            <a href="#" style="text-decoration: none;">Accueil</a>
+            <a href="#" style="text-decoration: none;">Service</a>
+            <a href="#" style="text-decoration: none;">Contact</a>
+            <a href="#" style="text-decoration: none;">Sign up</a>
+        </div>
+        <div class="icon"><i class="fa fa-bars"></i></div>
+    </div>
+    <div class="milieu">
+        <div class="contient1">
+            <div class="img-contain">
+                <img src="abel.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>NGARTOUDJINA Abel, Ingénieur à l'ENSGEP 😎.</p>
+            </div>
+        </div>
+        <div class="contient1">
+            <div class="img-contain">
+                <img src="issem1.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>NGARTOUDJINA Israel, dealer de IPhone & Samsung ✌.</p>
+            </div>
+        </div>
+        <div class="contient1">
+            <div class="img-contain">
+                <img src="isem2.jpg" alt="">
+            </div>
+            <div class="text">
+                <p>NGARTOUDJINA Ala-issem, constructeur des engins de transport 🤩.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const icone = document.querySelector('.icon');
+        const navbar = document.querySelector('.navbar');
+        //let verify = navbar.classList.contains('active');
+
+        function verifie() {
+            if (navbar.classList.contains('active')) {
+                icone.style.color = 'white';
+            } else {
+                icone.style.color = 'black';
+            }
+        }
+        //const icone2 = '<i class="fa-solid fa-xmark action"></i>';
+        //const icone4 = '<i class="fa fa-bars"></i>';
+        icone.addEventListener('click', () => {
+            //icone.outerHTML = icone2;
+            navbar.classList.toggle('active');
+            verifie();
+            //const icone3 = document.querySelector('.action');
+        })
+    </script>
+</body>
+
+</html>
